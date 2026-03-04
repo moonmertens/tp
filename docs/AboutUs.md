@@ -19,15 +19,15 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Team Member
 
-### Jane Doe
+### Gao Wei Jie
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/emperorgaodi.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/emperorgaodi)]
+[[portfolio]()]
 
-* Role: Team Lead
-* Responsibilities: UI
+* Role: Developer
+* Responsibilities: -
 
 ### Johnny Doe
 
