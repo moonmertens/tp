@@ -341,6 +341,33 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 *{More to be added}*
 
+**Use case 6 (U6): Edit an employee's details**
+Preconditions: Employee exists.
+
+**MSS**
+
+1. User requests to edit employee details.
+2. HRManager searches for the employee (U4).
+3. User enters the details to be updated.
+4. HRManager edits the employee's details, and displays the updated employee information.
+
+    Use case ends.
+
+**Extensions**
+
+* 1a. The user enters the command in the incorrect format.
+
+    * 1a1. HRmanager shows an error message.
+
+        Use case resumes at step 1.
+
+* 3a. User's given details are invalid.
+
+    * 3a1. HRmanager shows an error message.
+    
+        Use case resumes at step 3.
+
+
 ### Non-Functional Requirements
 
 1. Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
