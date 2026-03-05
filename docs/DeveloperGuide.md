@@ -442,7 +442,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     Use case ends.
 
 
-### Use case: UC6 - Edit an employee's details
+### Use case 6 (UC6): Edit an employee's details
 
 **MSS**
 
