@@ -343,11 +343,26 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Non-Functional Requirements
 
-1.  Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
-2.  Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
-3.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
-
-*{More to be added}*
+1. Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
+2. The system should respond to user commands within **1 second** under normal usage conditions.
+3. The system should be able to store and manage at least **100 employee records** while maintaining command response 
+    times within **1 second**.
+4. The system should be usable entirely through a **Command Line Interface (CLI)** without requiring graphical 
+    interaction such as mouse input.
+5. The system should store employee data **locally and persistently**, such that data remains available after the 
+    application is closed and reopened.
+6. The system should be usable by **HR managers who are not highly technical**, meaning commands should be simple and 
+    documentation should clearly explain how to use them.
+7. The system should follow **standard Java coding conventions and modular design principles** to ensure 
+   maintainability.
+8. The system should ensure that employee data stored in the system remains consistent and is not corrupted during 
+   normal usage.
+9. The system should ensure that employee information stored locally is not transmitted over the network without 
+   user intent.
+10. The system should handle invalid commands or inputs gracefully by displaying appropriate error messages without 
+    crashing.
+11. The system should be packaged as a single executable JAR file so that users can run the application without 
+    additional installation steps beyond having Java installed.
 
 ### Glossary
 
