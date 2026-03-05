@@ -326,7 +326,7 @@ Guarantees: Employee's details will be edited to what the user entered
 **MSS**
 
 1. User requests to edit employee details.
-2. System searches for the employee (U4).
+2. System searches for the employee (UC4).
 3. User enters the details to be updated.
 4. System edits the employee's details, and displays the updated employee information.
 
