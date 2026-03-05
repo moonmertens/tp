@@ -317,14 +317,17 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 (For all use cases below, the **System** is the `HRManager` and the **Actor** is the `user`, unless specified otherwise)
 
 **Use case: UC5 Tag an employee**
+**Actor: User**
+**Preconditions: There are users in the HRManager**
+**Gurantees: Employee is updated with the new tag**
 
 **MSS**
 
-1. User searches for employee (UC4)
-2. System shows list of employees
-3. User requests to tag a specific employee in the list
-4. System requests for the tag name
-5. User provides tag name
+1. User searches for employee. (UC4)
+2. System shows list of employees.
+3. User requests to tag a specific employee in the list.
+4. System requests for the tag name.
+5. User provides tag name.
 6. System adds the tag to the person and updates the list
    Use case ends.
 
@@ -338,48 +341,25 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. HRManager shows an error message.
 
-      Use case resumes at step 2.
+      Use case resumes at step 1.
 
 * 5a. The tag name provided is already associated with this person.
 
-    * 5a1. AddressBook shows an error message indicating the tag is a duplicate.
+    * 5a1. HRManager shows an error message indicating the tag is a duplicate.
      
       Use case resumes at step 2.
 
 * 5b. The tag name provided is invalid (e.g., blank or contains forbidden characters).
 
-    * 5b1. AddressBook shows an error message describing valid tag format.
+    * 5b1. HRManager shows an error message describing valid tag format.
 
       Use case resumes at step 4.
 
 * a. At any time, the User chooses to cancel the tagging operation.
 
-    * a1. AddressBook cancels the tagging.
+    * a1. HRManager cancels the tagging.
 
       Use case ends.
-
-**Use case: Delete a person**
-
-**MSS**
-
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
-
-    Use case ends.
-
-**Extensions**
-
-* 2a. The list is empty.
-
-  Use case ends.
-
-* 3a. The given index is invalid.
-
-    * 3a1. AddressBook shows an error message.
-
-      Use case resumes at step 2.
 
 *{More to be added}*
 
