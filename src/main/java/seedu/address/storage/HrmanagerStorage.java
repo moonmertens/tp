@@ -33,10 +33,10 @@ public interface HrmanagerStorage {
 
     /**
      * Saves the given {@link ReadOnlyHrmanager} to the storage.
-     * @param addressBook cannot be null.
+     * @param hrmanager cannot be null.
      * @throws IOException if there was any problem writing to the file.
      */
-    void saveHrmanager(ReadOnlyHrmanager addressBook) throws IOException;
+    void saveHrmanager(ReadOnlyHrmanager hrmanager) throws IOException;
 
     /**
      * @see #saveHrmanager(ReadOnlyHrmanager)

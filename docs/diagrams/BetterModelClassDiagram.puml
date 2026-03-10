@@ -4,8 +4,8 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
-HRmanager *-right-> "1" UniquePersonList
-HRmanager *-right-> "1" UniqueTagList
+hrmanager *-right-> "1" UniquePersonList
+hrmanager *-right-> "1" UniqueTagList
 UniqueTagList -[hidden]down- UniquePersonList
 UniqueTagList -[hidden]down- UniquePersonList
 

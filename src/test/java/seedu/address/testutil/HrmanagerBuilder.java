@@ -10,25 +10,25 @@ import seedu.address.model.person.Person;
  */
 public class HrmanagerBuilder {
 
-    private Hrmanager HRmanager;
+    private Hrmanager hrmanager;
 
     public HrmanagerBuilder() {
-        HRmanager = new Hrmanager();
+        hrmanager = new Hrmanager();
     }
 
-    public HrmanagerBuilder(Hrmanager HRmanager) {
-        this.HRmanager = HRmanager;
+    public HrmanagerBuilder(Hrmanager hrmanager) {
+        this.hrmanager = hrmanager;
     }
 
     /**
      * Adds a new {@code Person} to the {@code Hrmanager} that we are building.
      */
     public HrmanagerBuilder withPerson(Person person) {
-        HRmanager.addPerson(person);
+        hrmanager.addPerson(person);
         return this;
     }
 
     public Hrmanager build() {
-        return HRmanager;
+        return hrmanager;
     }
 }

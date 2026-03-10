@@ -19,7 +19,7 @@ import seedu.address.model.person.Person;
 public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
 
-    private final Hrmanager HRmanager;
+    private final Hrmanager hrmanager;
     private final UserPrefs userPrefs;
     private final FilteredList<Person> filteredPersons;
 
@@ -31,9 +31,9 @@ public class ModelManager implements Model {
 
         logger.fine("Initializing with address book: " + hrmanager + " and user prefs " + userPrefs);
 
-        this.HRmanager = new Hrmanager(hrmanager);
+        this.hrmanager = new Hrmanager(hrmanager);
         this.userPrefs = new UserPrefs(userPrefs);
-        filteredPersons = new FilteredList<>(this.HRmanager.getPersonList());
+        filteredPersons = new FilteredList<>(this.hrmanager.getPersonList());
     }
 
     public ModelManager() {
@@ -79,28 +79,28 @@ public class ModelManager implements Model {
 
     @Override
     public void setHrmanager(ReadOnlyHrmanager addressBook) {
-        this.HRmanager.resetData(addressBook);
+        this.hrmanager.resetData(addressBook);
     }
 
     @Override
     public ReadOnlyHrmanager getHrmanager() {
-        return HRmanager;
+        return hrmanager;
     }
 
     @Override
     public boolean hasPerson(Person person) {
         requireNonNull(person);
-        return HRmanager.hasPerson(person);
+        return hrmanager.hasPerson(person);
     }
 
     @Override
     public void deletePerson(Person target) {
-        HRmanager.removePerson(target);
+        hrmanager.removePerson(target);
     }
 
     @Override
     public void addPerson(Person person) {
-        HRmanager.addPerson(person);
+        hrmanager.addPerson(person);
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
     }
 
@@ -108,7 +108,7 @@ public class ModelManager implements Model {
     public void setPerson(Person target, Person editedPerson) {
         requireAllNonNull(target, editedPerson);
 
-        HRmanager.setPerson(target, editedPerson);
+        hrmanager.setPerson(target, editedPerson);
     }
 
     //=========== Filtered Person List Accessors =============================================================
@@ -140,7 +140,7 @@ public class ModelManager implements Model {
         }
 
         ModelManager otherModelManager = (ModelManager) other;
-        return HRmanager.equals(otherModelManager.HRmanager)
+        return hrmanager.equals(otherModelManager.hrmanager)
                 && userPrefs.equals(otherModelManager.userPrefs)
                 && filteredPersons.equals(otherModelManager.filteredPersons);
     }

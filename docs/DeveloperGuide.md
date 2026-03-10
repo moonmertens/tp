@@ -4,7 +4,7 @@
   pageNav: 3
 ---
 
-# HRmanager Developer Guide
+# hrmanager Developer Guide
 
 <!-- * Table of Contents -->
 <page-nav-print />
@@ -314,7 +314,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `HRmanager` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `hrmanager` and the **Actor** is the `user`, unless specified otherwise)
 
 
 ### Use case 1 (UC1): Add employee

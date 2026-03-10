@@ -64,24 +64,24 @@ public class JsonHrmanagerStorageTest {
     public void readAndSaveHrmanager_allInOrder_success() throws Exception {
         Path filePath = testFolder.resolve("TempHrmanager.json");
         Hrmanager original = getTypicalHrmanager();
-        JsonHrmanagerStorage jsonHRmanagerStorage = new JsonHrmanagerStorage(filePath);
+        JsonHrmanagerStorage jsonHrmanagerStorage = new JsonHrmanagerStorage(filePath);
 
         // Save in new file and read back
-        jsonHRmanagerStorage.saveHrmanager(original, filePath);
-        ReadOnlyHrmanager readBack = jsonHRmanagerStorage.readHrmanager(filePath).get();
+        jsonHrmanagerStorage.saveHrmanager(original, filePath);
+        ReadOnlyHrmanager readBack = jsonHrmanagerStorage.readHrmanager(filePath).get();
         assertEquals(original, new Hrmanager(readBack));
 
         // Modify data, overwrite exiting file, and read back
         original.addPerson(HOON);
         original.removePerson(ALICE);
-        jsonHRmanagerStorage.saveHrmanager(original, filePath);
-        readBack = jsonHRmanagerStorage.readHrmanager(filePath).get();
+        jsonHrmanagerStorage.saveHrmanager(original, filePath);
+        readBack = jsonHrmanagerStorage.readHrmanager(filePath).get();
         assertEquals(original, new Hrmanager(readBack));
 
         // Save and read without specifying file path
         original.addPerson(IDA);
-        jsonHRmanagerStorage.saveHrmanager(original); // file path not specified
-        readBack = jsonHRmanagerStorage.readHrmanager().get(); // file path not specified
+        jsonHrmanagerStorage.saveHrmanager(original); // file path not specified
+        readBack = jsonHrmanagerStorage.readHrmanager().get(); // file path not specified
         assertEquals(original, new Hrmanager(readBack));
 
     }

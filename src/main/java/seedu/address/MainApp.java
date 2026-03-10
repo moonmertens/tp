@@ -49,8 +49,8 @@ public class MainApp extends Application {
 
         UserPrefsStorage userPrefsStorage = new JsonUserPrefsStorage(config.getUserPrefsFilePath());
         UserPrefs userPrefs = initPrefs(userPrefsStorage);
-        HrmanagerStorage HRmanagerStorage = new JsonHrmanagerStorage(userPrefs.getHrmanagerFilePath());
-        storage = new StorageManager(HRmanagerStorage, userPrefsStorage);
+        HrmanagerStorage hrmanagerStorage = new JsonHrmanagerStorage(userPrefs.getHrmanagerFilePath());
+        storage = new StorageManager(hrmanagerStorage, userPrefsStorage);
 
         model = initModelManager(storage, userPrefs);
 

@@ -31,7 +31,7 @@ public class LogicManager implements Logic {
 
     private final Model model;
     private final Storage storage;
-    private final HrmanagerParser HrmanagerParser;
+    private final HrmanagerParser hrmanagerParser;
 
     /**
      * Constructs a {@code LogicManager} with the given {@code Model} and {@code Storage}.
@@ -39,7 +39,7 @@ public class LogicManager implements Logic {
     public LogicManager(Model model, Storage storage) {
         this.model = model;
         this.storage = storage;
-        HrmanagerParser = new HrmanagerParser();
+        hrmanagerParser = new HrmanagerParser();
     }
 
     @Override
@@ -47,7 +47,7 @@ public class LogicManager implements Logic {
         logger.info("----------------[USER COMMAND][" + commandText + "]");
 
         CommandResult commandResult;
-        Command command = HrmanagerParser.parseCommand(commandText);
+        Command command = hrmanagerParser.parseCommand(commandText);
         commandResult = command.execute(model);
 
         try {

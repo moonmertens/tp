@@ -17,14 +17,14 @@ import seedu.address.model.UserPrefs;
 public class StorageManager implements Storage {
 
     private static final Logger logger = LogsCenter.getLogger(StorageManager.class);
-    private HrmanagerStorage HrmanagerStorage;
+    private HrmanagerStorage hrmanagerStorage;
     private UserPrefsStorage userPrefsStorage;
 
     /**
-     * Creates a {@code StorageManager} with the given {@code HrmanagerStorage} and {@code UserPrefStorage}.
+     * Creates a {@code StorageManager} with the given {@code hrmanagerStorage} and {@code UserPrefStorage}.
      */
     public StorageManager(HrmanagerStorage HrmanagerStorage, UserPrefsStorage userPrefsStorage) {
-        this.HrmanagerStorage = HrmanagerStorage;
+        this.hrmanagerStorage = HrmanagerStorage;
         this.userPrefsStorage = userPrefsStorage;
     }
 
@@ -50,29 +50,29 @@ public class StorageManager implements Storage {
 
     @Override
     public Path getHrmanagerFilePath() {
-        return HrmanagerStorage.getHrmanagerFilePath();
+        return hrmanagerStorage.getHrmanagerFilePath();
     }
 
     @Override
     public Optional<ReadOnlyHrmanager> readHrmanager() throws DataLoadingException {
-        return readHrmanager(HrmanagerStorage.getHrmanagerFilePath());
+        return readHrmanager(hrmanagerStorage.getHrmanagerFilePath());
     }
 
     @Override
     public Optional<ReadOnlyHrmanager> readHrmanager(Path filePath) throws DataLoadingException {
         logger.fine("Attempting to read data from file: " + filePath);
-        return HrmanagerStorage.readHrmanager(filePath);
+        return hrmanagerStorage.readHrmanager(filePath);
     }
 
     @Override
-    public void saveHrmanager(ReadOnlyHrmanager addressBook) throws IOException {
-        saveHrmanager(addressBook, HrmanagerStorage.getHrmanagerFilePath());
+    public void saveHrmanager(ReadOnlyHrmanager hrmanager) throws IOException {
+        saveHrmanager(hrmanager, hrmanagerStorage.getHrmanagerFilePath());
     }
 
     @Override
-    public void saveHrmanager(ReadOnlyHrmanager addressBook, Path filePath) throws IOException {
+    public void saveHrmanager(ReadOnlyHrmanager hrmanager, Path filePath) throws IOException {
         logger.fine("Attempting to write to data file: " + filePath);
-        HrmanagerStorage.saveHrmanager(addressBook, filePath);
+        hrmanagerStorage.saveHrmanager(hrmanager, filePath);
     }
 
 }

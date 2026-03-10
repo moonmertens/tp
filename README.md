@@ -3,9 +3,9 @@
 
 ![Ui](docs/images/Ui.png)
 
-* **HRmanager** is a desktop application designed specifically for **Human Resource Managers**, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
-* **Value Proposition:** HRmanager keeps track of both potential recruits and existing employees. It provides fast access to employee details, with sorting options for further clarity (e.g., categorize according to departments, seniority). HRmanager helps HR professionals view job applicants' details at a glance and decide whether to proceed with interviews and hiring.
+* **hrmanager** is a desktop application designed specifically for **Human Resource Managers**, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
+* **Value Proposition:** hrmanager keeps track of both potential recruits and existing employees. It provides fast access to employee details, with sorting options for further clarity (e.g., categorize according to departments, seniority). hrmanager helps HR professionals view job applicants' details at a glance and decide whether to proceed with interviews and hiring.
 
-* For the detailed documentation of this project, please see the **[HRmanager Product Website](https://ay2526s2-cs2103t-t13-1.github.io/tp)**.
+* For the detailed documentation of this project, please see the **[hrmanager Product Website](https://ay2526s2-cs2103t-t13-1.github.io/tp)**.
 * This project is based on the AddressBook-Level3 project created by the [SE-EDU initiative](https://se-education.org).
 
