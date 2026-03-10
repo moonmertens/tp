@@ -23,8 +23,8 @@ public class StorageManager implements Storage {
     /**
      * Creates a {@code StorageManager} with the given {@code hrmanagerStorage} and {@code UserPrefStorage}.
      */
-    public StorageManager(HrmanagerStorage HrmanagerStorage, UserPrefsStorage userPrefsStorage) {
-        this.hrmanagerStorage = HrmanagerStorage;
+    public StorageManager(HrmanagerStorage hrmanagerStorage, UserPrefsStorage userPrefsStorage) {
+        this.hrmanagerStorage = hrmanagerStorage;
         this.userPrefsStorage = userPrefsStorage;
     }
 

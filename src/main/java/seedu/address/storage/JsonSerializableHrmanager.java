@@ -46,15 +46,15 @@ class JsonSerializableHrmanager {
      * @throws IllegalValueException if there were any data constraints violated.
      */
     public Hrmanager toModelType() throws IllegalValueException {
-        Hrmanager HRmanager = new Hrmanager();
+        Hrmanager hrmanager = new Hrmanager();
         for (JsonAdaptedPerson jsonAdaptedPerson : persons) {
             Person person = jsonAdaptedPerson.toModelType();
-            if (HRmanager.hasPerson(person)) {
+            if (hrmanager.hasPerson(person)) {
                 throw new IllegalValueException(MESSAGE_DUPLICATE_PERSON);
             }
-            HRmanager.addPerson(person);
+            hrmanager.addPerson(person);
         }
-        return HRmanager;
+        return hrmanager;
     }
 
 }
